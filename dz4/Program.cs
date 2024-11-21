@@ -39,6 +39,13 @@ class Program
     }
     static void Main()
     {
+        Task1();
+        Task2();
+        Task3();
+        Task4();
+    }
+    static void Task1()
+    {
         Console.WriteLine("1.");
         Random random = new Random();
         int[] massiv = new int[20];
@@ -64,17 +71,20 @@ class Program
                 {
                     Console.Write($"{i} ");
                 }
+                Console.WriteLine();
             }
             else
             {
                 throw new FormatException();
             }
         }
-        catch (FormatException) 
+        catch (FormatException)
         {
             Console.WriteLine("Неверный ввод");
         }
-        
+    }
+    static void Task2()
+    {
         Console.WriteLine("2.");
         Console.WriteLine("Введите 5 чисел:");
         int[] array = new int[5];
@@ -95,13 +105,17 @@ class Program
         {
             Console.WriteLine("Неверный ввод");
         }
-        
+    }
+    static void Task3()
+    {
         Console.WriteLine("3.");
         try
         {
             int a = 1;
             while (a != 0)
             {
+                Console.WriteLine("Напишите 'exit' или 'закрыть', если хотите закрыть консоль");
+                Console.WriteLine("Введите число от 0 до 9:");
                 string digit_str = Console.ReadLine();
                 if (digit_str == "exit" | digit_str == "закрыть")
                 {
@@ -128,7 +142,9 @@ class Program
         {
             Console.WriteLine("Неверный ввод");
         }
-        
+    }
+    static void Task4()
+    {
         Console.WriteLine("4.");
         Ded Maksim = new Ded()
         {
@@ -160,7 +176,7 @@ class Program
             grumping = LevelOfGrumping.Easy,
             phrases = ["Уроды!"]
         };
-        string[] mat = {"С*ки!", "Пид*расы!", "Г*ндоны!", "Бл*дь"};
+        string[] mat = { "С*ки!", "Пид*расы!", "Г*ндоны!", "Бл*дь" };
         Ded ded = new Ded();
         Console.WriteLine(ded.Fingals(Aleksey, mat));
     }

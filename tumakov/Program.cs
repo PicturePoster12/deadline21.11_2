@@ -107,6 +107,15 @@ class Laba
     } 
     static void Main()
     {
+        Task1();
+        Task2();
+        Task3();
+        Task4();
+        Task5();
+        Task6();
+    }
+    static void Task1()
+    {
         try
         {
             Console.WriteLine("5.1");
@@ -119,15 +128,21 @@ class Laba
         {
             Console.WriteLine("Неверный ввод");
         }
-
+    }
+    static void Task2()
+    {
         Console.WriteLine("5.2");
+        Console.WriteLine("Введите 2 строки:");
         var param1 = Console.ReadLine();
         var param2 = Console.ReadLine();
         Replace(ref param1, ref param2);
-
+    }
+    static void Task3()
+    {
         Console.WriteLine("5.3");
         Console.WriteLine("Введите число:");
-        try {
+        try
+        {
             int chislo = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine(Factorial(chislo));
         }
@@ -135,7 +150,9 @@ class Laba
         {
             Console.WriteLine("Неверный ввод");
         }
-
+    }
+    static void Task4()
+    {
         Console.WriteLine("5.4");
         Console.WriteLine("Введите число:");
         try
@@ -147,14 +164,16 @@ class Laba
         {
             Console.WriteLine("Неверный ввод");
         }
-
+    }
+    static void Task5()
+    {
         Console.WriteLine("dz5.1");
         try
         {
             Console.WriteLine("Введите 2 натуральных числа:");
             int first = Convert.ToInt32(Console.ReadLine());
             int second = Convert.ToInt32(Console.ReadLine());
-            if (first == 0 | second == 0)
+            if (first <= 0 | second <= 0)
             {
                 throw new FormatException();
             }
@@ -164,7 +183,7 @@ class Laba
             }
             Console.WriteLine("Введите третье натуральное число:");
             int third = Convert.ToInt32(Console.ReadLine());
-            if (third == 0)
+            if (third <= 0)
             {
                 throw new FormatException();
             }
@@ -177,7 +196,9 @@ class Laba
         {
             Console.WriteLine("Неверный ввод");
         }
-
+    }
+    static void Task6()
+    {
         Console.WriteLine("dz5.2");
         Console.WriteLine("Введите натуральное число:");
         try
